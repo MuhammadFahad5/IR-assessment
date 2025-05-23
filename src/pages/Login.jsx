@@ -5,8 +5,7 @@ import show_pass from '../assets/login/eye-slash.svg'
 import { NavLink } from 'react-router-dom'
 
 export default function Login() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+
   const [input, setInput] = useState({
     email: '',
     password: '',
@@ -56,11 +55,9 @@ export default function Login() {
                   <input
                     type="text"
                     placeholder="Enter E-mail"
-                    // value={username}
-                    // onChange={(e) => setUsername(e.target.value)}
                     value={input.email}
                     onChange={e => setInput({ ...input, email: e.target.value })}
-                    className="w-full p-[14px] mt-3 border rounded-lg bg-[#F7FAFC]"
+                    className="w-full p-[14px] mt-3 border rounded-lg bg-[#F7FAFC] focus:outline-none"
                     required
 
                   />
@@ -71,11 +68,9 @@ export default function Login() {
                     <input
                       type={showPassword ? 'text' : 'password'}
                       placeholder="Enter Password"
-                      // value={password}
-                      // onChange={(e) => setPassword(e.target.value)}
                       value={input.password}
                       onChange={e => setInput({ ...input, password: e.target.value })}
-                      className="w-full p-[14px] mt-3 border-t border-l border-b rounded-tl-lg rounded-bl-lg bg-[#F7FAFC]"
+                      className="w-full p-[14px] mt-3 border-t border-l border-b rounded-tl-lg rounded-bl-lg bg-[#F7FAFC] focus:outline-none"
                       required
                     />
                     <img className='border-t border-r border-b rounded-tr-lg rounded-br-lg bg-[#F7FAFC] mt-3 p-[14px]' src={show_pass} alt="view" onClick={() => setShowPassword(!showPassword)} style={{ cursor: 'pointer' }} />

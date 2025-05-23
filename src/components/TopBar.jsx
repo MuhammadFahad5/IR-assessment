@@ -102,7 +102,7 @@ const TopBar = () => {
                   alt="avatar"
                   className="w-8 h-8 rounded-full"
                 />
-                <span>Logout</span>
+                <span>John Doe</span>
                 <img
                   src={Vector}
                   alt="vector"
